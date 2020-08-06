@@ -8,17 +8,14 @@
 		private $dsn;
 		private function heroku_db_conn () {
 			$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-			$host = $$url["host"];
-			$user_name = $$url["user"];
-			$password = $$url["pass"];
-			$db_name = substr($$url["path"], 1);
-			try {
-				$dsn = "mysql:host=".$host.";dbname=".$db_name;
-				$conn = new mysqli($host, $user_name, $password, $db_name);
-				print_r($conn);
-			}catch (Exception $e) {
-				echo "Error - ".$e->getMessage();
-			}
+
+			$server = $url["host"];
+			$username = $url["user"];
+			$password = $url["pass"];
+			$db = substr($url["path"], 1);
+
+			$conn = new mysqli($server, $username, $password, $db);
+			print_r($conn);
 		}
 
 
