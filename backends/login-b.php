@@ -7,7 +7,7 @@
 	require 'backends/classes/Registration.php';
 	require 'backends/classes/Login.php';
 	session_start();
-	
+
 	// echo $form_validator->alpha_num_rand(10);
 	// $login->director_login();
 	if (strstr($_GET['t'], 'director')) $login_type = 'director';
@@ -32,7 +32,7 @@
 		if (!$form_val->check_all_errors($all_errors)) {
 			// echo $form_val->hashPassword($pass);
 			$is_valid_login  = $login->check_valid_login($login_type,$identity,$pass);
-			if ($is_valid_login) {
+			if (!$is_valid_login) {
 				$identity_err = $form_val->unregistered_user();
 			}else {
 
