@@ -14,10 +14,10 @@
 			$db_name = substr($$url["path"], 1);
 			try {
 				$dsn = "mysql:host=".$host.";dbname=".$db_name;
+				$conn = new mysqli($host, $user_name, $password, $db_name);
 			}catch (Exception $e) {
 				echo "Error - ".$e->getMessage();
 			}
-			$conn = new mysqli($host, $user_name, $password, $db_name);
 		}
 
 
@@ -32,8 +32,8 @@
 				}else {
 					$dsn = "mysql:host=".$this->host.";dbname=".$this->db_name;
 					echo "Connected to local Database successfully"."<br>";
+					parent::__construct($dsn,$this->user_name,$this->password);
 				}
-				parent::__construct($dsn,$this->user_name,$this->password);
 			}catch (Exception $e) {
 				echo "Error - ".$e->getMessage();
 			}
