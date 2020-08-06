@@ -12,11 +12,14 @@
 			$user_name = $$url["user"];
 			$password = $$url["pass"];
 			$db_name = substr($$url["path"], 1);
-			$dsn = "mysql:host=".$host.";dbname=".$db_name;
-			parent::__construct($dsn,$user_name,$password);
+			try {
+				$dsn = "mysql:host=".$host.";dbname=".$db_name;
+			}catch (Exception $e) {
+				echo "Error - ".$e->getMessage();
+			}
+			$conn = new mysqli($host, $user_name, $password, $db_name);
 		}
 
-		// $conn = new mysqli($server, $username, $password, $db);
 
 		public function getDbname () {
 			return $this->db_name;
