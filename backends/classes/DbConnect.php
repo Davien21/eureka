@@ -12,7 +12,7 @@
 			$username = $url["user"];
 			$password = $url["pass"];
 			$db = substr($url["path"], 1);
-			$dsn = "mysql:host=".$server.";dbname=".$db;
+			$dsn = "mysql:host=".$server;
 
 			parent::__construct($dsn,$username,$password);
 
