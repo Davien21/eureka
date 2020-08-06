@@ -7,7 +7,7 @@ $password = $url["pass"];
 $db = substr($url["path"], 1);
 
 $conn = new mysqli($server, $username, $password, $db);
-
+print_r($conn);
 	// require 'backends/classes/DbConnect.php';
 	// // require 'database/classes/SelectQuery.php';
 	// // require 'database/classes/UpdateQuery.php';
