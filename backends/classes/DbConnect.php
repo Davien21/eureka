@@ -1,16 +1,17 @@
 <?php
 	// echo "Db connect linked!";
 	class DbConnect extends PDO {
-
-		if ($_SERVER['HTTP_HOST']==='eureka-hms.herokuapp.com') {
-			private $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-			// $conn_type = 'heroku';
-			private $heroku_host = $this->$url["host"];
-			private $heroku_user_name = $this->$url["user"];
-			private $heroku_password = $this->$url["pass"];
-			private $heroku_db_name = substr($this->$url["path"], 1);
-		}else {
-			// $conn_type = 'local';
+		private function heroku_db_conn () {
+			if ($_SERVER['HTTP_HOST']==='eureka-hms.herokuapp.com') {
+				private $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+				// $conn_type = 'heroku';
+				private $heroku_host = $this->$url["host"];
+				private $heroku_user_name = $this->$url["user"];
+				private $heroku_password = $this->$url["pass"];
+				private $heroku_db_name = substr($this->$url["path"], 1);
+			}else {
+				// $conn_type = 'local';
+			}
 		}
 
 		// $conn = new mysqli($server, $username, $password, $db);
@@ -26,6 +27,8 @@
 		public function __construct () {
 			try {
 				if ($_SERVER['HTTP_HOST']==='eureka-hms.herokuapp.com') {
+					$this->heroku_db_conn();
+
 					$dsn = "mysql:host=".$this->heroku_host.";dbname=".$this->heroku_db_name;
 					echo "Connected to heroku Database successfully"."<br>";
 				}else {
