@@ -15,7 +15,7 @@
 			$db = substr($url["path"], 1);
 			$dsn = "mysql:host=".$server.";dbname=".$dbname;
 
-			parent::__construct($dsn,$this->username,$this->password);
+			parent::__construct($dsn,$username,$password);
 
 			// $conn = new mysqli($server, $username, $password, $db);
 
