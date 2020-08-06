@@ -8,10 +8,10 @@
 			<main class=" col">
 				<div class="container-fluid ">
 					<div class="row justify-content-center">
-						<div class="col-sm-8 col-md-6 col-lg-5 col-xl-4 my-5 my-md-4">
+						<div class="col-sm-8 col-md-6 col-lg-5 col-xl-4 my-5 my-md-4 ">
 							<div class="card zoom">
 							  <div class="view overlay ">
-							    <img class="card-img-top rounded-0" src="./assets/imgs/hospital-sm.jpg" alt="Card image cap">
+							    <img class="card-img-top rounded-0" src="./assets/imgs/hospital-sm.jpg" alt="A doctor in charge">
 							    <a href="./login.php?t=director">
 							      <div class="mask rgba-white-slight"></div>
 							    </a>
@@ -29,8 +29,8 @@
 						</div>
 						<div class="col-sm-8 col-md-6 col-lg-5 col-xl-4 my-5 my-md-4">
 							<div class="card zoom">
-							  <div class="view overlay  border-boo">
-							    <img class="card-img-top rounded-0" src="./assets/imgs/staff.jpg" alt="Card image cap">
+							  <div class="view overlay ">
+							    <img class="card-img-top rounded-0 " src="./assets/imgs/staff.jpg" alt="Different hospital workers">
 							    <a href="./login.php?t=staff">
 							      <div class="mask rgba-white-slight"></div>
 							    </a>

@@ -11,7 +11,7 @@
 		<div class="page-wrap h-100">
 			<header>
 				<nav class="navbar navbar-expand-lg navbar-dark primary-color">
-					<a class="navbar-brand" href="#">EUREKA</a>
+					<a class="navbar-brand" href="./">EUREKA</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"
 						aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
