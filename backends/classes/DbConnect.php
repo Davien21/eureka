@@ -13,9 +13,13 @@
 			$username = $url["user"];
 			$password = $url["pass"];
 			$db = substr($url["path"], 1);
+			$dsn = "mysql:host=".$server.";dbname=".$dbname;
 
-			$conn = new mysqli($server, $username, $password, $db);
-			print_r($conn);
+			parent::__construct($dsn,$this->username,$this->password);
+
+			// $conn = new mysqli($server, $username, $password, $db);
+
+			// print_r($conn);
 		}
 
 
