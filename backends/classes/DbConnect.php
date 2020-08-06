@@ -15,6 +15,7 @@
 			try {
 				$dsn = "mysql:host=".$host.";dbname=".$db_name;
 				$conn = new mysqli($host, $user_name, $password, $db_name);
+				print_r($conn);
 			}catch (Exception $e) {
 				echo "Error - ".$e->getMessage();
 			}
