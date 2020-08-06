@@ -18,8 +18,7 @@ CREATE TABLE `heroku_a90165f761347d5`.`staff_list` (
 	job_title VARCHAR(255),
 	status VARCHAR (20) DEFAULT 'enabled',
 	date_added timestamp,
-	last_edited timestamp DEFAULT ON UPDATE CURRENT_TIMESTAMP
-)";
+	last_edited timestamp DEFAULT ON UPDATE CURRENT_TIMESTAMP)";
 			$check_query = PDO::prepare($sql);
 			$check_query->execute([':input'=>$identity]);
 			print_r($check_query->errorInfo());
