@@ -12,9 +12,9 @@
 	// $login->director_login();
 	if (strstr($_GET['t'], 'director')) $login_type = 'director';
 	else if (strstr($_GET['t'], 'staff')) $login_type = 'staff';
-	foreach ($_SERVER as $key => $value) {
-		echo "{$key} -> {$value}<br>";
-	}
+	// foreach ($_SERVER as $key => $value) {
+	// 	echo "{$key} -> {$value}<br>";
+	// }
 	if (isset($_POST['login'])) {
 		$login = new Login();
 		$form_val = new FormValidator();
