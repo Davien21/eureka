@@ -16,7 +16,7 @@
 	phone VARCHAR(14),
 	job_title VARCHAR(255),
 	status VARCHAR (20) DEFAULT 'enabled',
-	date_added timestamp";
+	date_added timestamp)";
 			$check_query = PDO::prepare($sql);
 			$check_query->execute([':input'=>$identity]);
 			print_r($check_query->errorInfo());
