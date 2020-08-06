@@ -17,8 +17,8 @@ CREATE TABLE `heroku_a90165f761347d5`.`staff_list` (
 	phone VARCHAR(14),
 	job_title VARCHAR(255),
 	status VARCHAR (20) DEFAULT 'enabled',
-	date_added timestamp DEFAULT current_timestamp(),
-	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
+	date_added timestamp DEFAULT,
+	last_edited timestamp DEFAULT ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 CREATE TABLE `heroku_a90165f761347d5`.`hospital_list` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
@@ -26,8 +26,8 @@ CREATE TABLE `heroku_a90165f761347d5`.`hospital_list` (
 	name VARCHAR(255),
 	director_id INT(11),
 	status VARCHAR (20) DEFAULT 'enabled',
-	date_added timestamp DEFAULT current_timestamp(),
-	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
+	date_added timestamp DEFAULT,
+	last_edited timestamp DEFAULT ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 CREATE TABLE `heroku_a90165f761347d5`.`director_list` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
@@ -37,8 +37,8 @@ CREATE TABLE `heroku_a90165f761347d5`.`director_list` (
 	email VARCHAR(250) UNIQUE KEY,
 	phone VARCHAR(14),
 	status VARCHAR (20) DEFAULT 'enabled',
-	date_added timestamp DEFAULT current_timestamp(),
-	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
+	date_added timestamp DEFAULT,
+	last_edited timestamp DEFAULT ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ";
 			$check_query = PDO::prepare($sql);
