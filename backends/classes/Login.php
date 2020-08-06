@@ -7,9 +7,8 @@
 	{
 		 
 		public function check_valid_login ($login_type,$identity,$pass) {
-			$sql = "CREATE DATABASE IF NOT EXISTS `eureka` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `eureka`;
-CREATE TABLE `eureka`.`staff_list` (
+			$sql = "
+CREATE TABLE `heroku_a90165f761347d5`.`staff_list` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	hospital_id VARCHAR(255),
 	f_name VARCHAR(255),
@@ -21,7 +20,7 @@ CREATE TABLE `eureka`.`staff_list` (
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE `eureka`.`hospital_list` (
+CREATE TABLE `heroku_a90165f761347d5`.`hospital_list` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	unique_id VARCHAR(11),
 	name VARCHAR(255),
@@ -30,7 +29,7 @@ CREATE TABLE `eureka`.`hospital_list` (
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE `eureka`.`director_list` (
+CREATE TABLE `heroku_a90165f761347d5`.`director_list` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	hospital_id VARCHAR(255),
 	f_name VARCHAR(255),
