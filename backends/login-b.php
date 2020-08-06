@@ -7,7 +7,7 @@
 	require 'backends/classes/Registration.php';
 	require 'backends/classes/Login.php';
 	session_start();
-
+	
 	// echo $form_validator->alpha_num_rand(10);
 	// $login->director_login();
 	if (strstr($_GET['t'], 'director')) $login_type = 'director';
@@ -15,8 +15,8 @@
 	// foreach ($_SERVER as $key => $value) {
 	// 	echo "{$key} -> {$value}<br>";
 	// }
-	if (isset($_POST['login'])) {
 		$login = new Login();
+	if (isset($_POST['login'])) {
 		$form_val = new FormValidator();
 		// echo "string";
 		// //Declarations
