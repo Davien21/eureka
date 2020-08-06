@@ -15,8 +15,8 @@
 	// foreach ($_SERVER as $key => $value) {
 	// 	echo "{$key} -> {$value}<br>";
 	// }
-		$login = new Login();
 	if (isset($_POST['login'])) {
+		$login = new Login();
 		$form_val = new FormValidator();
 		// echo "string";
 		// //Declarations
