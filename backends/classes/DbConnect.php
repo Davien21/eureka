@@ -1,10 +1,10 @@
 <?php
 	// echo "Db connect linked!";
 	class DbConnect extends PDO {
-		private $host = "remotemysql.com";
-		private $db_name = '3vOS7K3O7v';
-		private $user_name = "3vOS7K3O7v";
-		private $password = "hKSP0tCy8V";
+		private $host = "197.210.85.88";
+		private $db_name = 'eureka';
+		private $user_name = "root";
+		private $password = "";
 		private $dsn;
 		private function heroku_db_conn () {
 			$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
