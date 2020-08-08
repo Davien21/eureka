@@ -129,7 +129,7 @@
 				return check_if_empty($variable,$label)['error'];
 			}
 			else {
-				 $pattern = '/^(\+234|0)[7-9]{1}(0|1)\d{7}\d$/';
+				 $pattern = '/^(\+234|0)[7-9]{1}(0|1)\d{8}$/';
 				 $error_status = true;
 			    if(!( preg_match($pattern,$variable))) {
 			        return ['status'=>$error_status,'error'=>"Please Input a Valid ".$label]['error']; 
@@ -224,6 +224,9 @@
 		}
 		function unregistered_user () {
 			return 'This User is not registered';
+		}
+		function invalid_pass () {
+			return 'Wrong Password';
 		}
 		function check_email_in_db ($email,$table,$database) {
 			if (check_valid_email($email,'Email')['status']) {

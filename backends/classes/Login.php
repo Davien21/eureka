@@ -6,27 +6,36 @@
 	class Login extends DBConnect
 	{
 		 
-		public function check_valid_login ($login_type,$identity,$pass) {
-			$sql = "CREATE TABLE `heroku_a90165f761347d5`.`staff_list` (
-	id INT AUTO_INCREMENT PRIMARY KEY, 
-	hospital_id VARCHAR(255),
-	f_name VARCHAR(255),
-	l_name VARCHAR(255),
-	email VARCHAR(250) UNIQUE KEY,
-	phone VARCHAR(14),
-	job_title VARCHAR(255),
-	status VARCHAR (20) DEFAULT 'enabled',
-	date_added timestamp)";
+		public function check_valid_identity ($login_type,$identity,$pass) {
+			$sql = "SELECT * 
+					FROM {$login_type}_list
+					WHERE ((email = :input) 
+					OR (phone = :input)) 
+					AND status = 'enabled'";
 			$check_query = PDO::prepare($sql);
 			$check_query->execute([':input'=>$identity]);
-			print_r($check_query->errorInfo());
-			$record = $check_query->fetch(PDO::FETCH_ASSOC);
+			// print_r($check_query->errorInfo());
+			$record = $check_query->fetchColumn();
 			return $record;
 		}
-		public function director_login () {
-			
+		public function check_valid_pass ($login_type,$identity,$pass) {
+			$sql = "SELECT * 
+					FROM {$login_type}_list
+					WHERE ((email = :input) 
+					OR (phone = :input)) 
+					AND status = 'enabled'";
+			$check_query = PDO::prepare($sql);
+			$check_query->execute([':input'=>$identity]);
+			$record = $check_query->fetch(PDO::FETCH_ASSOC);
+			return password_verify($pass, $record['pass']) ;
 		}
-		public function staff_login () {
+		public function grant_login_access ($login_type) {
+			$_SESSION['user'] = $login_type;
+			$_SESSION['id'] = $is_valid_user['id'];
+			if ($login_type === 'director') header('Location:./director/index.php');
+			if ($login_type === 'staff') header('Location:./staff/index.php');
+		}
+		public function grant_staff_login () {
 			echo "Success staff login";
 		}
 		
