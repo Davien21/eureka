@@ -13,7 +13,7 @@
 			$check_query->execute([':input'=>$identity]);
 			// print_r($check_query->errorInfo());
 			// $record = $check_query->fetchColumn();
-			$record = $check_query->fetch(PDO::FETCH_ASSOC);
+			$record = $check_query->fetchAll(PDO::FETCH_ASSOC);
 			var_dump($record);
 			return $record;
 		}
