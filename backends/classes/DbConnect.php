@@ -24,7 +24,7 @@
 		public function getDbname () {
 			return $this->db_name;
 		}
-		public function __construct () {
+		private function __construct () {
 			try {
 				if ($_SERVER['HTTP_HOST']==='eureka-hms.herokuapp.com') {
 					$this->heroku_db_conn();
