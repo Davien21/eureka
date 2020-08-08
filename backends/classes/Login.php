@@ -14,8 +14,10 @@
 					AND status = 'enabled'";
 			$check_query = PDO::prepare($sql);
 			$check_query->execute([':input'=>$identity]);
-			print_r($check_query->errorInfo());
-			$record = $check_query->fetchColumn();
+			// print_r($check_query->errorInfo());
+			// $record = $check_query->fetchColumn();
+			$record = $check_query->fetch(PDO::FETCH_ASSOC);
+			print_r($record);
 			return $record;
 		}
 		public function check_valid_pass ($login_type,$identity,$pass) {
