@@ -22,7 +22,7 @@
 			if (!$is_valid_user) return $identity_err = $form_val->unregistered_user();
 			$is_valid_pass = $login->check_valid_pass($login_type,$identity,$pass);
 			if (!$is_valid_pass) return $pass_err = $form_val->invalid_pass();
-			$login->grant_login_access ($login_type);
+			// $login->grant_login_access ($login_type);
 		}
 	}else {
 		$identity  = '';
