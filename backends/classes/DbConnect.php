@@ -28,10 +28,10 @@
 			try {
 				if ($_SERVER['HTTP_HOST']==='eureka-hms.herokuapp.com') {
 					$this->heroku_db_conn();
-					// echo "Connected to heroku Database successfully"."<br>";
+					echo "Connected to heroku Database successfully"."<br>";
 				}else {
 					$dsn = "mysql:host=".$this->host.";dbname=".$this->db_name;
-					// echo "Connected to local Database successfully"."<br>";
+					echo "Connected to local Database successfully"."<br>";
 					parent::__construct($dsn,$this->user_name,$this->password);
 				}
 			}catch (Exception $e) {
