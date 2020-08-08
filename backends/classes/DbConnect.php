@@ -8,6 +8,7 @@
 		private $dsn;
 		private function heroku_db_conn () {
 			$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+			print_r($url);
 			$server = $url["host"];
 			$username = $url["user"];
 			$password = $url["pass"];
@@ -16,7 +17,7 @@
 
 			parent::__construct($dsn,$username,$password);
 
-			$conn = new mysqli($server, $username, $password, $db);
+			// $conn = new mysqli($server, $username, $password, $db);
 			
 		}
 
@@ -24,7 +25,7 @@
 		public function getDbname () {
 			return $this->db_name;
 		}
-		private function __construct () {
+		public function __construct () {
 			try {
 				if ($_SERVER['HTTP_HOST']==='eureka-hms.herokuapp.com') {
 					$this->heroku_db_conn();
