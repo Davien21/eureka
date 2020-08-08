@@ -14,7 +14,7 @@
 					AND status = 'enabled'";
 			$check_query = PDO::prepare($sql);
 			$check_query->execute([':input'=>$identity]);
-			// print_r($check_query->errorInfo());
+			print_r($check_query->errorInfo());
 			$record = $check_query->fetchColumn();
 			return $record;
 		}
