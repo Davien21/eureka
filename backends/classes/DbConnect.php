@@ -16,7 +16,11 @@
 
 			parent::__construct($dsn,$username,$password);
 
-			// $conn = new mysqli($server, $username, $password, $db);
+			$conn = new mysqli($server, $username, $password, $db);
+			$t = $conn->query("SELECT * 
+					FROM director_list");
+			print_r($conn);
+			var_dump($t);
 		}
 
 
