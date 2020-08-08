@@ -8,14 +8,13 @@
 		 
 		public function check_valid_identity ($login_type,$identity,$pass) {
 			$sql = "SELECT * 
-					FROM {$login_type}_list
-					WHERE ((email = :input) 
-					OR (phone = :input)) 
-					AND status = 'enabled'";
+					FROM {$login_type}_list";
 			$check_query = PDO::prepare($sql);
 			$check_query->execute([':input'=>$identity]);
 			// print_r($check_query->errorInfo());
-			$record = $check_query->fetchColumn();
+			// $record = $check_query->fetchColumn();
+			$record = $check_query->fetchAll(PDO::FETCH_ASSOC);
+			var_dump($record);
 			return $record;
 		}
 		public function check_valid_pass ($login_type,$identity,$pass) {
