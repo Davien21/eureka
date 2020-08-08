@@ -11,9 +11,9 @@
 }
  
 
-@keyframes example {
-  from {background-color: red;}
-  to {background-color: yellow;}
+@keyframes btn-effect {
+  from {margin-right: 0px;}
+  to {margin-right: 5px;}
 }
 .err {
 	/*font-size: 80%;*/
@@ -31,4 +31,25 @@
     width: 100%;
     height: auto;
     position: absolute;
+}
+.bg-img{
+	min-height: 100vh;
+	width: auto;
+}
+.tiny-svg {
+	height: 30px;
+	cursor: pointer;
+	/*width: 50px;*/
+}
+.no-btn-style {
+	border:0;
+	background: 0;
+	margin: 0;
+	padding: 0;
+}
+.no-btn-style:focus {
+	outline: 0;
+	animation: btn-effect ease-in-out;
+	animation-duration: 0.1s
+	/*margin-right:5px; */
 }

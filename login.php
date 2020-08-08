@@ -16,7 +16,7 @@
 	                			<label for="identity">Email or Phone</label>
 	                			<small class="err"><?=$identity_err?></small>
 	                		</div>
-	                		<div class="form-group md-form">
+	                		<div class="form-group md-form mt-5">
 	                			<input id="pass" type="password" class="form-control" name="pass">
 	                			<label for="pass">Password</label>
 	                			<div class="d-flex absolute small" style="right: 0;bottom: 5px">

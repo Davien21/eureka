@@ -4,6 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
 	    <meta http-equiv="x-ua-compatible" content="ie=edge">
 		<?php require 'mdb.php'; ?>
+		<link rel="icon" href="./assets/imgs/svgs/hospital.svg" type="image/svg">
 		<link rel="stylesheet" type="text/css" href="./assets/css/extra-responsive.css">
 		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 	</head>

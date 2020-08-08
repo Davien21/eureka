@@ -7,6 +7,7 @@ CREATE TABLE `eureka`.`staff_list` (
 	l_name VARCHAR(255),
 	email VARCHAR(250) UNIQUE KEY,
 	phone VARCHAR(14),
+	pass VARCHAR(255),
 	job_title VARCHAR(255),
 	status VARCHAR (20) DEFAULT 'enabled',
 	date_added timestamp DEFAULT current_timestamp(),
@@ -28,6 +29,7 @@ CREATE TABLE `eureka`.`director_list` (
 	l_name VARCHAR(255),
 	email VARCHAR(250) UNIQUE KEY,
 	phone VARCHAR(14),
+	pass VARCHAR(255),
 	status VARCHAR (20) DEFAULT 'enabled',
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
