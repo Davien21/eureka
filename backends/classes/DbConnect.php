@@ -17,7 +17,7 @@
 			$db = '3vOS7K3O7v';
 			$user = "3vOS7K3O7v";
 			$pass = "hKSP0tCy8V";
-			$dsn = "mysql:host=".$$host.";dbname=".$db;
+			$dsn = "mysql:host=".$host.";dbname=".$db;
 			return $conn = ['dsn'=>$dsn,'user'=>$user,'pass'=>$pass];
 		}
 		public function __construct () {
