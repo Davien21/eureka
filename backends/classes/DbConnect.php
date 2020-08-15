@@ -22,6 +22,7 @@
 		}
 		public function __construct () {
 			try {
+				echo $_SERVER['HTTP_HOST'];
 				if ($_SERVER['HTTP_HOST'] !== 'localhost') {
 					$conn = $this->remote_db_conn();
 				}else {
