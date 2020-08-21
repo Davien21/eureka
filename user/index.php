@@ -12,7 +12,7 @@
 		    case '/eureka/user/home.php' :
 		        require './dash-views/first-login.php';
 		        break;
-		    case '/eureka/user/first-login' :
+		    case '/eureka/user/' :
 
 		        require './dash-views/first-login.php';
 
