@@ -5,38 +5,53 @@
 	 */
 	class Login extends DBConnect
 	{
-		 
-		public function check_valid_identity ($login_type,$identity,$pass) {
+		public function __construct ($table) {
+			parent::__construct();
+			$this->table = $table;
+		}
+		public function check_valid_identity ($identity,$pass) {
 			$sql = "SELECT * 
-					FROM {$login_type}_list
+					FROM {$this->table}
 					WHERE ((email = :input) 
 					OR (phone = :input)) 
 					AND status = 'enabled'";
 			$check_query = PDO::prepare($sql);
 			$check_query->execute([':input'=>$identity]);
 			// print_r($check_query->errorInfo());
-			$record = $check_query->fetchColumn();
-			return $record;
+			$is_existing_input = $check_query->fetchColumn();
+			if (!$is_existing_input) return "This Email is not registered";
+			
 		}
-		public function check_valid_pass ($login_type,$identity,$pass) {
+		public function check_valid_pass ($identity,$pass) {
 			$sql = "SELECT * 
-					FROM {$login_type}_list
+					FROM {$this->table}
 					WHERE ((email = :input) 
 					OR (phone = :input)) 
 					AND status = 'enabled'";
 			$check_query = PDO::prepare($sql);
 			$check_query->execute([':input'=>$identity]);
-			$record = $check_query->fetch(PDO::FETCH_ASSOC);
-			return password_verify($pass, $record['pass']) ;
+			// print_r($check_query->errorInfo());
+
+			$hashed_pass = $check_query->fetch(PDO::FETCH_ASSOC)['pass'];
+			$is_correct_pass = password_verify($pass, $hashed_pass);
+			if (!$is_correct_pass) return "Wrong Password";
 		}
-		public function grant_login_access ($login_type) {
-			$_SESSION['user'] = $login_type;
-			$_SESSION['id'] = $is_valid_user['id'];
-			if ($login_type === 'director') header('Location:./director/index.php');
-			if ($login_type === 'staff') header('Location:./staff/index.php');
+
+		public function get_user_id($input)	{
+			$sql = "SELECT id 
+					FROM {$this->table}
+					WHERE ((email = :input) 
+					OR (phone = :input)) 
+					AND status = 'enabled'";
+			$check_query = PDO::prepare($sql);
+			$check_query->execute(["input"=>$input]);
+			// echo print_r($check_query->errorInfo());
+			return $id = $check_query->fetch(PDO::FETCH_ASSOC)['id'];
 		}
-		public function grant_staff_login () {
-			echo "Success staff login";
+		public function grant_login ($input) {
+			session_start();
+			$_SESSION['user'] = $this->get_user_id($input,$field);
+			header('Location:./user');
 		}
 		
 	}

@@ -1,37 +1,401 @@
+/* ----------------------------------------------------------------
+[Table of contents]
+01. Google Fonts
+02. Default styles
+03. Menu or Navbar styles
+03. Sidebar/Sidemenu styles
+04. Carousel Slider styles
+05. Stores section styles - disabled
+06. Default Footer style
+07. Login Page styles
+08. Features Page style
+09. 404 Page style
+10. Terms and conditions (privacy,cookies,site instructions) template Page style
+------------------------------------------------------------------- */
+
+
+/* ======= Google Fonts  ======= */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+
+/* ======= Default styles  ======= */
+* {
+    border:none;
+    outline:none;
+    margin: 0;
+    padding: 0;
+    /*transition: 0.4s ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;*/
+}
+body {
+    overflow-wrap: break-word;
+    min-height: 100vh;
+}
+main {
+	padding-top: 40px;
+}
+@media screen and (min-width:992px) {
+	main {
+		padding-top: 0px;
+	}
+}
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.max-100vh {
+	max-height: 100vh;
+}
+.emphasis {
+	font-weight: 550;
+}
+ 
+.z-depth-2 {
+	-webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+	box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+.orange-txt {
+	color: rgb(255, 108, 0) !important;
+}
+.orange-bg {
+	background-color: rgb(255, 108, 0) !important;
+}
+.green-txt {
+	color: #28A745;
+}
+.txt-shadow-1 {
+	/*text-shadow: 3px 4px 7px rgba(81,67,21,0.8);*/
+	text-shadow: 2px 2px 4px #333;
+} 
+.txt-shadow-2 {
+	text-shadow: 2px 2px 4px #b9b9b9;
+}
+.med-svg {
+	cursor: pointer;
+	width:20px;
+	height: auto;
+}
+.green-btn {
+	color: #fff !important;
+	border-radius: 0px !important;
+	min-width: 110px;
+	text-align: center;
+	background-color: #28A745;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+}
+.raleway-a *{
+	font-family: Raleway;
+}
+.green-bg {
+	color: #fff !important;
+	background-color: #28A745;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+}
+.bg-trans {
+	background-color: transparent;
+}
+.body-height {
+	min-height: 92vh;
+}
+
+.green-btn * {
+	color: #fff !important;
+	opacity: 1 !important;
+}
+.green-btn:hover {
+	outline: 1.5px solid #fff;
+	color: #fff !important;
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+
+}
+.social-svgs img, img.social-svg  {
+	cursor: pointer;
+	width:15px;
+}
+.circle-svgs {
+	border: 1px solid #000;
+	border-radius: 40%;
+}
+.link {
+	font-size: 0.95em;
+    color: #0069D9 !important;
+    overflow-wrap: break-word;
+}
+.break-word {
+    overflow-wrap: break-word;
+}
+
+.active, li.active a {
+	color: #28A745 !important;
+}
+.no-trans {
+    transition: none !important;
+}
+
+.upper-case {
+	text-transform: uppercase;
+}
+.gen-overlay {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+/* ======= Menu or Navbar styles  ======= */
+nav {
+	overflow: hidden;
+}
+nav  *{
+	font-size: 95% !important;
+}
+.sticky {
+	position: fixed;
+	top: 0; left: 0;
+	padding: 0.5rem 0;
+	width: 100%;
+	box-shadow: 0 6px 10px -4px rgba(0,0,0,.15);
+	z-index: 1050;
+}
+
+a.navbar-brand {
+	font-size: 120% !important;
+	align-self: flex-end;
+	font-weight: 550;
+}
+.menu-span {
+	box-shadow: 2px -3px 0px 18px #FFF;
+}
+.menu-svg {
+	cursor: pointer;
+	width:35px;
+	height: auto;
+}
+
+.nav-item.btn-success a {
+	color: #fff !important;
+	opacity: 1;
+}
+a.nav-link {
+	text-transform: uppercase;
+	font-weight: 550;
+	color: #000 ;
+	opacity: 0.7;
+	font-size: 0.85rem;
+	/*font-family: montserrat;*/
+}
+li.nav-item :hover {
+	color: #28A745 !important;
+}
+
+/* ======= Side menu styles  ======= */
+.side-menu *{
+	text-align: left;
+}
+.side-menu {
+	max-width: 100vw;
+	position: absolute;
+	top: 0;	right: 0;
+	padding: 0.5rem 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 5;
+}
+.side-menu a.navbar-brand {
+	font-size: 150% !important;
+}
+.side-menu a.nav-link {
+	font-size: 0.9rem !important;
+}
+.side-menu li.nav-item:hover {
+	background-color: #ECECEC;
+	/*border-radius: 0.2rem !important;*/
+	padding-left: 20px;
+    transition: 50ms ease-in-out;
+
+}
+.side-menu-overlay {
+    transition: 0.4s ease-in-out;
+	background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	top: 0; right: -100vw;
+}
+.side-menu .close-btn img{
+	width: 30px;
+	height: 30px;
+}
+@media screen and (min-width:600px) {
+	.side-menu {
+		max-width: 320px;
+	}
+}
+
+/* ===== Carousel styles ======*/
+.carousel-item {
+	width: 100vw;
+	min-height: 60vh;
+}
+@media screen and (min-width:768px) {
+	.carousel-item {
+		min-height: 84.1vh;
+	}
+}
+.carousel .controls {
+	z-index: 100;
+}
+.carousel-item::after {
+	content: "";  
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+.carousel-item img{
+	height: 100%;
+}
+.carousel-item .slider-txts {
+	position: absolute;
+	left: 0; right: 0;
+	margin-left: auto; margin-right: auto;
+	margin-top: 120px;
+	text-align: center;
+	z-index: 2;
+	width: 80%;
+	/*font-family: Raleway,*/
+}
+.carousel-item .slider-txts p {
+	font-size: 1.2rem;
+	color: #fff;
+	line-height: 2rem;
+}
+@media screen and (min-width:768px) {
+	.carousel-item .slider-txts p {
+		font-size: 2rem;
+		color: #fff;
+		line-height: 4rem;
+	}
+}
+/* ==== Styles for the stores section ====*/
+
+img#mobile-life {
+	max-height: 100vh;
+	width: 100%;
+}
+@media screen and (min-width:768px) {
+	img#mobile-life {
+		max-height: 74vh;
+	}
+}
+
+/* ==== Footer styles =====*/
+body > footer {
+	min-height: 92vh;
+	background-color: #272941;
+}
+body > footer * {
+	color: #fff !important;
+	/*font-family: Raleway;*/
+}
+
+body > footer .footer-li {
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+/*============================================= SELECT LOGIN PAGE =================================================== */
+
+body#select-login-page {
+	background-color: #8AC4DA;
+}
+.card {
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	border: 0;
+}
+.card-text {
+	font-size: 0.85rem !important;
+}
+
+.zoom *{
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+
+}
+.zoom:hover img{
+	transform: scale(1.05);
+	/* overflow: hidden; */
+
+}
+/*============================================= LOGIN PAGE =================================================== */
+body#login-page {
+	background-color: #8AC4DA;
+}
+/*body#login {
+	background: url('../imgs/construction-site-sm.jpg') no-repeat fixed;
+	background-size: cover;
+}*/
+body#login section#login {
+	min-height: 92vh;
+}
+form.login {
+	/*box-shadow: 0 27px 24px 0 rgba(0,0,0,0.2),*/
+		/*0 40px 77px 0 rgba(0,0,0,0.22) !important;*/
+	box-shadow: 0 6px 10px -4px rgba(0,0,0,.15);
+	max-width: 400px;
+}
+form.login * {
+	/*font-family: Raleway;*/
+	font-size: 95%;
+}
+form .err {
+	font-size: 0.8rem !important;
+}
+
+/*============================================= FEATURES PAGE =================================================== */
+section#features .paper-box-shadow {
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important;
+}
+
+body#login section#login {
+	min-height: 92vh;
+}
+ 
+/*============================================= 404 PAGE =================================================== */
+
+body#error-404-page {
+	background-color: #F8FCFF;
+}
+body#error-404-page h2{
+	margin-top: -50px;
+}
+@media screen and (min-width:768px) {
+	body#error-404-page h2{
+		margin-top: -100px;
+	}
+}
+
+
+/*====================================== Imported Styles (change name) ==================================== */
+
+
 .bg-1 {
 	background: url('../imgs/bgs/bg-3.jpg') no-repeat;
 	background-size: cover;
 }
- 
-.page-wrap {
-	display: flex;
-	/*height: 100%;*/
-	min-height: 100vh;
-	flex-direction: column;
-}
- 
+
 
 @keyframes btn-effect {
   from {margin-right: 0px;}
   to {margin-right: 5px;}
 }
 .err {
-	/*font-size: 80%;*/
-	position: absolute;
+	font-style: 0.8rem !important;
 	color: red;
 }
 
-.image-wrapper {
-    width: 100%;
-    height: 0;
-    padding-bottom: 150%; /* You define this doing image height / width * 100% */
-    position: relative;
-}
-.image {
-    width: 100%;
-    height: auto;
-    position: absolute;
-}
 .bg-img{
 	min-height: 100vh;
 	width: auto;
