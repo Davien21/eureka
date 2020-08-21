@@ -6,7 +6,7 @@
 		
 		$request = $_SERVER['REQUEST_URI'];
 		echo $request;
-		// echo __DIR__;
+		echo __DIR__;
 		// if ()
 		switch ($request) {
 		    case '/eureka/user/home.php' :
