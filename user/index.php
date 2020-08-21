@@ -1,4 +1,4 @@
-	<?php  require './backends/home-b.php'; ?>
+	<?php  // require './backends/home-b.php'; ?>
 
 	<?php require 'user-menu.php'; user_menu('home','Home')?>
 
