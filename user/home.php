@@ -7,7 +7,7 @@
 		$request = $_SERVER['REQUEST_URI'];
 		// echo $request;
 		echo __DIR__;
-		if ()
+		// if ()
 		switch ($request) {
 		    case '/eureka-r/user/' :
 		        require './home.php';
