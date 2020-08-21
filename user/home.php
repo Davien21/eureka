@@ -8,22 +8,22 @@
 		// echo $request;
 		echo __DIR__;
 		// if ()
-		switch ($request) {
-		    case '/eureka-r/user/' :
-		        require './home.php';
-		        break;
-		    case '/eureka-r/user/first-login' :
-		        require './dash-views/first-login.php';
+		// switch ($request) {
+		//     case '/eureka-r/user/' :
+		//         require './home.php';
+		//         break;
+		//     case '/eureka-r/user/first-login' :
+		//         require './dash-views/first-login.php';
 
-		        break;
-		    case '/eureka-r/user/hospital-setup' :
-		        require './dash-views/first-login.php';
-		        break;
-		    default:
-		        http_response_code(404);
-		        require '../404.php';
-		        break;
-		}
+		//         break;
+		//     case '/eureka-r/user/hospital-setup' :
+		//         require './dash-views/first-login.php';
+		//         break;
+		//     default:
+		//         http_response_code(404);
+		//         require '../404.php';
+		//         break;
+		// }
 		// else if ()
 	?>
 			
