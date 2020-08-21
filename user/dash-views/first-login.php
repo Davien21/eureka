@@ -3,12 +3,12 @@
 	<p>What would you like to do?</p>
 	<div class="row" >
 		<div class="col-sm-6 mb-4 mb col-md-4 ">
-			<a class="paper-box-shadow pointer p-5 green-btn d-block" href="./?r=hospital-setup">
+			<a class="paper-box-shadow pointer p-5 green-btn d-block" href="./hospital-setup">
 				Set Up Hospital
 			</a>
 		</div>
 		<div class="col-sm-6 mb-4 mb col-md-4 ">
-			<a class="paper-box-shadow pointer p-5 green-btn d-block" href="./?r=join-hospital">
+			<a class="paper-box-shadow pointer p-5 green-btn d-block" href="./join-hospital">
 				Join a Hospital
 			</a>
 		</div>

@@ -6,18 +6,19 @@
 		
 		$request = $_SERVER['REQUEST_URI'];
 		echo $request;
-		echo __DIR__;
+		// echo __DIR__;
 		// if ()
 		switch ($request) {
-		    case '/eureka/user/' :
+		    case '/eureka/user/home.php' :
 		        require './dash-views/first-login.php';
 		        break;
-		    case '/eureka-r/user/first-login' :
+		    case '/eureka/user/first-login' :
+
 		        require './dash-views/first-login.php';
 
 		        break;
-		    case '/eureka-r/user/hospital-setup' :
-		        require './dash-views/first-login.php';
+		    case '/eureka/user/hospital-setup' :
+		        require './dash-views/hospital-setup.php';
 		        break;
 		    default:
 		        http_response_code(404);
