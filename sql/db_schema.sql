@@ -24,6 +24,7 @@ CREATE TABLE `eureka`.`hospitals` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	unique_id VARCHAR(11),
 	name VARCHAR(255),
+	address VARCHAR(255),
 	director_id INT(11),
 	status VARCHAR (20) DEFAULT 'enabled',
 	date_added timestamp DEFAULT current_timestamp(),

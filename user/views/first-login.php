@@ -1,5 +1,5 @@
 <div class="w-100">
-	<p class="mt-3 ">Hello <?='f_name'?>!</p>
+	<p class="mt-3 ">Hello <?=$f_name?>!</p>
 	<p>What would you like to do?</p>
 	<div class="row" >
 		<div class="col-sm-6 mb-4 mb col-md-4 ">

@@ -170,7 +170,7 @@ aside#side-nav .nav-links li:last-child {
     border-bottom: none;
 }
 
-section#main-content,main#main-content {
+section#main-content {
     min-height: 95vh;
     display: flex;
     flex-direction: column;

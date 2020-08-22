@@ -1,3 +1,4 @@
+<?php http_response_code(404); ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -19,7 +20,7 @@
 							Something went wrong
 						</h2>	
 						<p class="text-center">The page you are looking for is missing</p>	
-						<a href="./index.html" class="green-btn btn px-4 raleway mx-auto py-2">Go to Home Page</a>
+						<a href="./index.php" class="green-btn btn px-4 raleway mx-auto py-2">Go to Home Page</a>
 					</div>
 				</div>
 			</section>
