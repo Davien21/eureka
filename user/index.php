@@ -1,4 +1,6 @@
-	<?php   echo __DIR__."<br>"; 
+	<?php   
+		require './backends/home-b.php';
+		echo __DIR__."<br>"; 
 		foreach ($_SERVER as $key => $value) {
 			echo "{$key} : {$value}<br>";
 		}
