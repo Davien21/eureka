@@ -50,7 +50,7 @@
 		}
 		public function grant_login ($input) {
 			session_start();
-			$_SESSION['user'] = $this->get_user_id($input,$field);
+			$_SESSION['user'] = $this->get_user_id($input);
 			header('Location:./user');
 		}
 		
