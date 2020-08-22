@@ -7,5 +7,5 @@
 		unset($_SESSION['group']);
 		unset($_SESSION['school']);
 	}
-	header('Location:../index.php');
+	header('Location:../login.php');
 ?>

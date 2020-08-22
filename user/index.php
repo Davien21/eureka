@@ -13,6 +13,12 @@
 			require 'user-menu.php'; user_menu('home','Select Hospital Tools');
 	        require __DIR__.'/views/select-hospital-tools.php';
 			
+		}else if ($request === '/join-hospital') {
+			require 'user-menu.php'; user_menu('home','Join Hospital');
+	        require __DIR__.'/views/join-hospital.php';
+			
+		}else if ($request === '/logout') {
+	        header('Location:../backends/logout.php');
 		}else {
 	        header('Location:../404.php');
 

@@ -44,7 +44,7 @@ $l6 = "class='active'";
 <header class="">
 <nav  class="mobile-nav navbar d-md-none navbar-light flex-column">
 <div id="side-nav" class="py-2 d-flex fixed-top w-100 px-3 green-bg paper-box-shadow">
-<a class="navbar-brand upper-case" href=".//" title="Go to Home Page">
+<a class="navbar-brand upper-case" href="./" title="Go to Home Page">
 <span class="text-white ">Eureka</span>
 <!-- <span class="">Pal</span> -->
 </a>
@@ -54,7 +54,7 @@ $l6 = "class='active'";
 <aside class="side-menu-overlay ">
 <div class="side-menu bg-white d-flex flex-column px-3 ">
 <div class="d-flex justify-content-between align-items-center">
-<a class="navbar-brand upper-case " href=".//" title="Go to Home Page">
+<a class="navbar-brand upper-case " href="./" title="Go to Home Page">
 	<span class="green-txt">Eureka</span>
 </a>
 <span class="nav-toggler close-btn d-inline-block" title="Toggle menu">
@@ -66,13 +66,13 @@ $l6 = "class='active'";
 	<a class="nav-link px-0 mt-2 border-top" href="./" > Home </a>
 </li>
 <li class="nav-item px-xl-2 active">
-	<a class="nav-link px-0 mt-2 border-top"  href="../profile"> Account Profile </a>
+	<a class="nav-link px-0 mt-2 border-top"  href="./profile"> Account Profile </a>
 </li>
 <li class="nav-item px-xl-2 active">
-	<a class="nav-link px-0 mt-2 border-top" href="../settings"> Settings </a>
+	<a class="nav-link px-0 mt-2 border-top" href="./settings"> Settings </a>
 </li>
 <li class="nav-item px-xl-2 active">
-	<a class="nav-link px-0 mt-2 border-top" href="../backends/logout"> Logout </a>
+	<a class="nav-link px-0 mt-2 border-top" href="./logout"> Logout </a>
 </li>
 </ul>
 
@@ -102,7 +102,7 @@ $l6 = "class='active'";
 <li <?=$l1?> ><a class="d-block" href="./" > Home </a></li>
 <li <?=$l6?> ><a class="d-block" href="./profile"> Account Profile </a></li>
 <li <?=$l5?> ><a class="d-block" href="./settings"> Settings </a></li>   
-<li <?=$l5?> ><a class="d-block" href="./backends/logout"> Logout </a></li>   
+<li <?=$l5?> ><a class="d-block" href="./logout"> Logout </a></li>   
 </ul>
 </aside>
 <section class="col-md-9 offset-md-3 col-xs-12" id="main-content">
@@ -117,7 +117,7 @@ if($default_header) {
 </ol>
 <div class="col d-flex align-items-center">
 <img src="../assets/imgs/svgs/email.svg" class="tiny-svg ml-auto ml-sm-0 " alt="messages" title="View Messages">
-<a href="../backends/logout" class="btn btn-danger ml-auto d-none d-sm-inline-block"><b> Logout </b></a>
+<a href="./logout" class="btn btn-danger ml-auto d-none d-sm-inline-block"><b> Logout </b></a>
 </div>
 </nav>
 </header>

@@ -1,4 +1,4 @@
-<?php
+	<?php
 	/**
 	 * This Class is responsible for all logins on this App
 	 * See Chidiebere Ekennia for reference

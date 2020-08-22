@@ -2,7 +2,6 @@
 	
 	require 'backends/classes/DbConnect.php';
 	require 'backends/classes/FormValidator.php';
-	require 'backends/classes/Registration.php';
 	require 'backends/classes/Login.php';
 	if (isset($_POST['login'])) {
 		$form_val = new FormValidator();
