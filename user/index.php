@@ -1,4 +1,8 @@
-	<?php   echo __DIR__; ?>
+	<?php   echo __DIR__; 
+		foreach ($_SERVER as $key => $value) {
+			echo "{$key} : {$value}";
+		}
+	?>
 
 	<?php 
 		// $request = $_SERVER['REQUEST_URI'];
