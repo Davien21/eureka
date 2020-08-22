@@ -2,5 +2,5 @@ RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*) /eureka-hms.herokuapp.com/user/home.php [QSA,L]
+RewriteRule ^([\w\-_]+)/?$ ./index.php?page=$1 [NC]
 
