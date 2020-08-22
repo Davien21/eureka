@@ -1,4 +1,4 @@
-	<?php   echo __DIR__; 
+	<?php   echo __DIR__."<br>"; 
 		foreach ($_SERVER as $key => $value) {
 			echo "{$key} : {$value}";
 		}
