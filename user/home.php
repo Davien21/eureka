@@ -38,6 +38,7 @@
 		}
 		else {
 			echo $request;
+			echo __DIR__;
 	        // header('Location:../404.php');
 
 		}
