@@ -1,7 +1,7 @@
-DirectoryIndex user/home.php
+DirectoryIndex home.php
 RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*) /eureka/user/home.php [QSA,L]
+RewriteRule ^(.*) /app/user/home.php [QSA,L]
 
