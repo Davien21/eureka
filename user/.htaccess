@@ -3,5 +3,5 @@ RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ /app/user/index.php [QSA,L]
+RewriteRule ^(.*)$ /user/$1 [QSA,L]
 
