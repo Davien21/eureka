@@ -1,5 +1,5 @@
 	<?php   
-		require './backends/home-b.php';
+		// require './backends/home-b.php';
 		// echo __DIR__."<br>"; 
 		// foreach ($_SERVER as $key => $value) {
 
@@ -17,9 +17,9 @@
         	require __DIR__.'/views/first-login.php';
 		}
 		else if ($request === '/user/hospital-setup') {
-
-			require 'user-menu.php'; user_menu('home','Hospital Setup');
-	        require __DIR__.'/views/hospital-setup.php';
+			echo "OKEKE";
+			// require 'user-menu.php'; user_menu('home','Hospital Setup');
+	        // require __DIR__.'/views/hospital-setup.php';
 		}
 		else if ($request === '/user/join-hospital') {
 
