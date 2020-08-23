@@ -2,5 +2,5 @@ RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([\w\-_]+)/?$ ./index.php?page=$1 [NC]
+RewriteRule ^(.*) app/home.php?page=$1 [NC]
 
