@@ -1,5 +1,5 @@
 	<?php   
-		// require './backends/home-b.php';
+		require './backends/home-b.php';
 		// echo __DIR__."<br>"; 
 		// foreach ($_SERVER as $key => $value) {
 
@@ -9,31 +9,31 @@
 	
 	<?php 
 		$request = $_SERVER['REQUEST_URI'];
-			echo $request."<br>";
-		// $request = substr($request, strrpos($request,'/'));
-		if ($request === '/user/') {
+		$request = substr($request, strrpos($request,'/'));
+		if ($request === '/') {
+			// echo $request."<br>";
 			// echo __DIR__;
 			require 'user-menu.php'; user_menu('home','Home');
         	require __DIR__.'/views/first-login.php';
 		}
-		else if ($request === '/user/hospital-setup') {
-			echo "OKEKE";
-			// require 'user-menu.php'; user_menu('home','Hospital Setup');
-	        // require __DIR__.'/views/hospital-setup.php';
+		else if ($request === '/hospital-setup') {
+
+			require 'user-menu.php'; user_menu('home','Hospital Setup');
+	        require __DIR__.'/views/hospital-setup.php';
 		}
-		else if ($request === '/user/join-hospital') {
+		else if ($request === '/join-hospital') {
 
 			require 'user-menu.php'; user_menu('home','Join Hospital');
 	        require __DIR__.'/views/join-hospital.php';
 			
 		}
-		else if ($request === '/user/select-hospital-tools') {
+		else if ($request === '/select-hospital-tools') {
 
 			require 'user-menu.php'; user_menu('home','Select Hospital Tools');
 	        require __DIR__.'/views/select-hospital-tools.php';
 			
 		}
-		else if ($request === '/user/logout') {
+		else if ($request === '/logout') {
 
 	        header('Location:../backends/logout.php');
 		}
