@@ -1,10 +1,10 @@
 	<?php   
 		require './backends/home-b.php';
-		// echo __DIR__."<br>"; 
-		// foreach ($_SERVER as $key => $value) {
+		echo __DIR__."<br>"; 
+		foreach ($_SERVER as $key => $value) {
 
-		// 	echo "{$key} : {$value}<br>";
-		// }
+			echo "{$key} : {$value}<br>";
+		}
 	?>
 
 	<?php 
