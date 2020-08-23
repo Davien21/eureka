@@ -21,19 +21,19 @@
 			require 'user-menu.php'; user_menu('home','Hospital Setup');
 	        require __DIR__.'/views/hospital-setup.php';
 		}
-		else if ($request === '//user/join-hospital') {
+		else if ($request === '/user/join-hospital') {
 
 			require 'user-menu.php'; user_menu('home','Join Hospital');
 	        require __DIR__.'/views/join-hospital.php';
 			
 		}
-		else if ($request === '//user/select-hospital-tools') {
+		else if ($request === '/user/select-hospital-tools') {
 
 			require 'user-menu.php'; user_menu('home','Select Hospital Tools');
 	        require __DIR__.'/views/select-hospital-tools.php';
 			
 		}
-		else if ($request === '//user/logout') {
+		else if ($request === '/user/logout') {
 
 	        header('Location:../backends/logout.php');
 		}
