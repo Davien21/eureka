@@ -3,5 +3,5 @@ RewriteEngine On
 RewriteBase /user
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ /user/$1.php [R=301,NC]
+RewriteRule ^(.+)$ /user/index.php/$1 [R,L]
 
