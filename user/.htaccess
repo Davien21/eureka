@@ -3,5 +3,5 @@ RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ /eureka/user/home.php [QSA,R=404,L]
+RewriteRule ^(.*)$ /eureka/user/home.php [QSA,L]
 
