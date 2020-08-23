@@ -11,7 +11,7 @@
 		$request = $_SERVER['REQUEST_URI'];
 		$request = substr($request, strrpos($request,'/'));
 		if ($request === '/') {
-				echo $request."<br>";
+			echo $request."<br>";
 			echo __DIR__;
 			require 'user-menu.php'; user_menu('home','Home');
         	require __DIR__.'/views/first-login.php';
