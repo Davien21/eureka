@@ -1,4 +1,4 @@
-<?php //require './backends/hospital-setup-b.php'; ?>
+<?php require './backends/hospital-setup-b.php'; ?>
 <section class="hospital-setup row ">
 	<form class="col-sm-9 col-md-9 col-lg-7 mx-a uto" action="" method="post">
 		<p class="">
