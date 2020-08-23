@@ -1,7 +1,7 @@
 DirectoryIndex index.php
 RewriteEngine On
-RewriteBase /user
+#RewriteBase /user
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)$ /user/index.php/$1 [R,L]
+RewriteRule ^(.+)$ /user/$1 [QSA,L]
 
