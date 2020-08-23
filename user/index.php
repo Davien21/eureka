@@ -6,7 +6,7 @@
 		// 	echo "{$key} : {$value}<br>";
 		// }
 	?>
-
+	
 	<?php 
 		$request = $_SERVER['REQUEST_URI'];
 		$request = substr($request, strrpos($request,'/'));
