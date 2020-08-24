@@ -1,13 +1,5 @@
 	<?php   
 		require './backends/home-b.php';
-		// echo __DIR__."<br>"; 
-		// foreach ($_SERVER as $key => $value) {
-
-		// 	echo "{$key} : {$value}<br>";
-		// }
-	?>
-
-	<?php 
 		$request = $_SERVER['REQUEST_URI'];
 		$request = substr($request, strrpos($request,'/'));
 		if ($request === '/') {
@@ -37,9 +29,7 @@
 	        header('Location:../backends/logout.php');
 		}
 		else {
-			echo $request;
-			echo __DIR__;
-	        // header('Location:../404.php');
+	        header('Location:../404.php');
 
 		}
 	?>
