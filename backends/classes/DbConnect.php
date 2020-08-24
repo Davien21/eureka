@@ -14,15 +14,15 @@
 		}
 		private function remote_db_conn () {
 			$host = "remotemysql.com";
-			$db = '3vOS7K3O7v';
-			$user = "3vOS7K3O7v";
-			$pass = "hKSP0tCy8V";
+			$db = getenv('remote_db');
+			$user = getenv('remote_db');
+			$pass = getenv('remote_db_pass');
 			$dsn = "mysql:host=".$host.";dbname=".$db;
 			return $conn = ['dsn'=>$dsn,'user'=>$user,'pass'=>$pass];
 		}
 		protected function __construct () {
 			try {
-				if ($_SERVER['HTTP_HOST'] !== 'localhost') {
+				if (!strstr($_SERVER['HTTP_HOST'], 'localhost') ) {
 					$conn = $this->remote_db_conn();
 				}else {
 					$conn = $this->local_conn();
