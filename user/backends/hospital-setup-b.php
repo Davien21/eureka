@@ -25,7 +25,6 @@
 				$unique_id = $register->get_random_id ('unique_id');
 				$invite_key = $register->get_random_id ('invite_key');
 				$error = $register->add_hospital($id,$name,$address,$email,$phone,$unique_id,$invite_key);
-				print_r($error);
 				if (empty($error)) header('Location:./select-hospital-tools');
 			}
 
