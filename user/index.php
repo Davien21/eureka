@@ -25,7 +25,6 @@
 			
 		}
 		else if ($request === '/logout') {
-
 	        header('Location:../backends/logout.php');
 		}
 		else {
