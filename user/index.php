@@ -1,10 +1,5 @@
 	<?php   
 		require './backends/home-b.php';
-		// echo __DIR__."<br>"; 
-		foreach ($_ENV as $key => $value) {
-			// echo "{$key} : {$value}<br>";
-		}
-		echo getenv('test');
 		$request = $_SERVER['REQUEST_URI'];
 		$request = substr($request, strrpos($request,'/'));
 		if ($request === '/') {
