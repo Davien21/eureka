@@ -34,7 +34,7 @@ $l6 = "class='active'";
 <link rel="stylesheet" type="text/css" href="../assets/css/utility.css" media="all" />
 <link rel="stylesheet" type="text/css" href="../assets/css/extra-responsive.css" media="all" />
 <link rel="stylesheet" type="text/css" href="../assets/css/style.css" media="all" />
-
+<link rel="shortcut icon" href="">
 <!-- <link rel="icon" href="assets/images/logo.png" /> -->
 
 </head>

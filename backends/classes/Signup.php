@@ -9,10 +9,12 @@
 			parent::__construct();
 			$this->table = $table;
 		}
+		public function __toString () {
+			return "Name: ".__CLASS__."<br>This Object allows you to signup a user";
+		}
 		public function check_if_in_db ($input,$field) {
 			$sql = "SELECT 1 FROM {$this->table}
-					WHERE {$field} = :input 
-					AND status = 'enabled'";
+					WHERE {$field} = :input"; 
 			$check_query = PDO::prepare($sql);
 			$check_query->execute([':input'=>$input]);
 			// print_r($check_query->errorInfo());
@@ -42,8 +44,7 @@
 			$sql = "SELECT id 
 					FROM {$this->table}
 					WHERE ((email = :input) 
-					OR (phone = :input)) 
-					AND status = 'enabled'";
+					OR (phone = :input))"; 
 			$check_query = PDO::prepare($sql);
 			$check_query->execute(["input"=>$input]);
 			// echo print_r($check_query->errorInfo());

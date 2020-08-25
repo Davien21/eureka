@@ -3,7 +3,6 @@
 	if (!isset($_SESSION['user'])) return  header('Location:../login.php');
 	require '../backends/classes/DbConnect.php';
 	require './backends/classes/UserProfile.php';
-	require '../backends/classes/HospitalSetup.php';
 	require '../backends/classes/FormValidator.php';
 	$id = $_SESSION['user'];
 	$user_profile = new UserProfile($id);

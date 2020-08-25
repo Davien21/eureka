@@ -1,5 +1,5 @@
 <?php
-	
+	require 'classes/HospitalSetup.php';
 	if (isset($_POST['register'])) {
 		$form = new FormValidator();
 		//Declaration of hospital details 
@@ -22,9 +22,8 @@
 			$email_err = $register->check_if_in_db ($email,'email');
 			$phone_err = $register->check_if_in_db ($phone,'phone');
 			if (empty($email_err) && empty($phone_err)) {
-				$unique_id = $register->get_random_id ('unique_id');
 				$invite_key = $register->get_random_id ('invite_key');
-				$error = $register->add_hospital($id,$name,$address,$email,$phone,$unique_id,$invite_key);
+				$error = $register->add_hospital($id,$name,$address,$email,$phone,$invite_key);
 				if (empty($error)) header('Location:./select-hospital-tools');
 			}
 

@@ -8,4 +8,5 @@
 <!-- <script type="text/javascript" src="../assets/js/mdb.min.js"></script> -->
 <!-- Your custom scripts (optional) -->
 <script src="../assets/js/index.js"></script>
+<script src="../assets/js/dash.js"></script>
 

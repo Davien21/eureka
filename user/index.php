@@ -24,11 +24,17 @@
 	        require __DIR__.'/views/join-hospital.php';
 			
 		}
+		else if ($request === '/getting-started') {
+			require 'user-menu.php'; user_menu('home','Getting Started');
+	        require __DIR__.'/views/first-overview.php';
+
+		}
 		else if ($request === '/logout') {
 	        header('Location:../backends/logout.php');
 		}
 		else {
-	        header('Location:../404.php');
+			echo $request;
+	        // header('Location:../404.php');
 
 		}
 	?>

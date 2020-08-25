@@ -311,3 +311,12 @@ aside#side-nav {
 }   
 @media screen and (min-width:1200px) {
 }
+
+/*  */
+
+.checkbox-btn {
+    color: #fff;
+    padding: 1.5rem;
+}
+
+ 

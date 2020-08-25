@@ -3,18 +3,18 @@
 	 * This Class is responsible for all logins on this App
 	 * See Chidiebere Ekennia for reference
 	 */
-	class Settings extends DBConnect
+	class UserSetting extends DBConnect
 	{
 		public function __construct ($id) {
 			parent::__construct();
 			$this->user_id = $id;
 		}
 		public function __toString () {
-			return "This Object allows you to perform CRUD operations on a User's settings";
+			return "Name: ".__CLASS__."<br>This Object allows you to perform CRUD operations on a user's settings";
 		}
 		public function get_user_settings()	{
 			$sql = "SELECT * 
-					FROM user_settings
+					FROM hospital_settings
 					WHERE id = :id
 					AND status = 'enabled'";
 			$check_query = PDO::prepare($sql);

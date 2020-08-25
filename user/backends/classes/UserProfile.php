@@ -15,8 +15,7 @@
 		public function get_user_profile()	{
 			$sql = "SELECT * 
 					FROM users
-					WHERE id = :id
-					AND status = 'enabled'";
+					WHERE id = :id";
 			$check_query = PDO::prepare($sql);
 			$check_query->execute(["id"=>$this->user_id]);
 			// echo print_r($check_query->errorInfo());

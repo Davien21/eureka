@@ -5,6 +5,9 @@
 	class FormValidator 
 	//extends DBConnect
 	{
+		public function __toString () {
+			return "Name: ".__CLASS__."<br>This Object allows you to perform input validations";
+		}
 		public function sanitizeInputs($value,$ucf=false) {
 			$value = trim($value);
 			$value = filter_var($value, FILTER_SANITIZE_STRING);
@@ -19,7 +22,7 @@
 		}
 		public function check_if_selected ($post_variable) {
 			if (isset($_POST[$post_variable])) {
-				return sanitizeInputs($_POST[$post_variable]);
+				return $this->sanitizeInputs($_POST[$post_variable]);
 			}else {
 				return '';
 			}

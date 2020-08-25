@@ -397,8 +397,8 @@ body#error-404-page h2{
 }
 
 .bg-img{
-	min-height: 100vh;
-	width: auto;
+	height: 100vh;
+	width: 100vw;
 }
 .tiny-svg {
 	height: 30px;

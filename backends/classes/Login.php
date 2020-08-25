@@ -9,12 +9,14 @@
 			parent::__construct();
 			$this->table = $table;
 		}
+		public function __toString () {
+			return "Name: ".__CLASS__."<br>This Object allows you to login a user";
+		}
 		public function check_valid_identity ($identity,$pass) {
 			$sql = "SELECT * 
 					FROM {$this->table}
 					WHERE ((email = :input) 
-					OR (phone = :input)) 
-					AND status = 'enabled'";
+					OR (phone = :input))"; 
 			$check_query = PDO::prepare($sql);
 			$check_query->execute([':input'=>$identity]);
 			// print_r($check_query->errorInfo());
@@ -26,8 +28,7 @@
 			$sql = "SELECT * 
 					FROM {$this->table}
 					WHERE ((email = :input) 
-					OR (phone = :input)) 
-					AND status = 'enabled'";
+					OR (phone = :input))"; 
 			$check_query = PDO::prepare($sql);
 			$check_query->execute([':input'=>$identity]);
 			// print_r($check_query->errorInfo());
@@ -41,8 +42,7 @@
 			$sql = "SELECT id 
 					FROM {$this->table}
 					WHERE ((email = :input) 
-					OR (phone = :input)) 
-					AND status = 'enabled'";
+					OR (phone = :input))"; 
 			$check_query = PDO::prepare($sql);
 			$check_query->execute(["input"=>$input]);
 			// echo print_r($check_query->errorInfo());
@@ -51,7 +51,7 @@
 		public function grant_login ($input) {
 			session_start();
 			$_SESSION['user'] = $this->get_user_id($input);
-			header('Location:./user');
+			header('Location:./user/');
 		}
 		
 	}

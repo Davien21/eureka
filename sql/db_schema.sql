@@ -16,25 +16,25 @@ CREATE TABLE `eureka`.`user_settings` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	user_id VARCHAR(255),
 	login_type VARCHAR(255),
-	status VARCHAR (20) DEFAULT 'enabled',
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 CREATE TABLE `eureka`.`hospitals` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
-	unique_id VARCHAR(11),
 	name VARCHAR(255),
 	address VARCHAR(255),
 	director_id INT(11),
+	invite_key VARCHAR(11),
 	status VARCHAR (20) DEFAULT 'enabled',
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 CREATE TABLE `eureka`.`hospital_settings` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
-	user_id VARCHAR(255),
-	login_type VARCHAR(255),
-	status VARCHAR (20) DEFAULT 'enabled',
+	hospital_id INT(255),
+	patient_ms VARCHAR(6),
+	finance_ms VARCHAR(6),
+	activity_ms VARCHAR(6),
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -47,7 +47,6 @@ CREATE TABLE `eureka`.`staff` (
 	phone VARCHAR(14),
 	pass VARCHAR(255),
 	job_title VARCHAR(255),
-	status VARCHAR (20) DEFAULT 'enabled',
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -59,7 +58,6 @@ CREATE TABLE `eureka`.`directors` (
 	email VARCHAR(250) UNIQUE KEY,
 	phone VARCHAR(14),
 	pass VARCHAR(255),
-	status VARCHAR (20) DEFAULT 'enabled',
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
