@@ -24,7 +24,11 @@
 			if (empty($email_err) && empty($phone_err)) {
 				$invite_key = $register->get_random_id ('invite_key');
 				$error = $register->add_hospital($id,$name,$address,$email,$phone,$invite_key);
-				if (empty($error)) header('Location:./select-hospital-tools');
+				if (empty($error)) {
+					$progress = new UserProgress($id);
+					$progress->update_user_progress('select-hospital-tools');
+					header('Location:./select-hospital-tools');
+				}
 			}
 
 		}

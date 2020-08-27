@@ -14,7 +14,7 @@
 		}
 		public function get_user_settings()	{
 			$sql = "SELECT * 
-					FROM hospital_settings
+					FROM user_settings
 					WHERE id = :id
 					AND status = 'enabled'";
 			$check_query = PDO::prepare($sql);
