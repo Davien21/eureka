@@ -5,9 +5,9 @@
 	 */
 	class HospitalSetting extends DBConnect
 	{
-		public function __construct ($table='hospital_settings') {
+		public function __construct ($user_id) {
 			parent::__construct();
-			$this->table = $table;
+			$this->user_id = $user_id;
 		}
 		public function __toString () {
 			return "Name: ".__CLASS__.

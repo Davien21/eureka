@@ -11,7 +11,6 @@
 	$f_name = $user['f_name'] ;
 	$user_progress = new UserProgress($id);
 	$progress = $user_progress->get_user_progress(); 
-	
-	if(!$progress) echo "no progress, first setup";;
-	$last_view = $progress['view'];
+	// var_dump($progress);
+	if(!empty($progress)) $last_view = $progress['view'];
 ?>

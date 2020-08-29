@@ -26,8 +26,8 @@
 				$error = $register->add_hospital($id,$name,$address,$email,$phone,$invite_key);
 				if (empty($error)) {
 					$progress = new UserProgress($id);
-					$progress->update_user_progress('select-hospital-tools');
-					header('Location:./select-hospital-tools');
+					$error = $progress->add_user_progress('select-hospital-tools');
+					if (empty($error)) header('Location:./select-hospital-tools');
 				}
 			}
 

@@ -38,7 +38,7 @@
 		public function update_user_progress($view,$extra_details=false) {
 			$sql = "UPDATE user_progress
 					SET	view = :view, extra_details = :extra_details
-					WHERE id = :id";
+					WHERE user_id = :id";
 			$insert_query = PDO::prepare($sql);
 			$insert_query -> 
 				execute([
