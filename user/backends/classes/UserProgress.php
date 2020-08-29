@@ -16,7 +16,7 @@
 		public function get_user_progress()	{
 			$sql = "SELECT * 
 					FROM user_progress
-					WHERE id = :id";
+					WHERE user_id = :id";
 			$check_query = PDO::prepare($sql);
 			$check_query->execute(["id"=>$this->user_id]);
 			// echo print_r($check_query->errorInfo());
