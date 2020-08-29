@@ -1,1 +1,0 @@
-Hi, Great that you've completed the first setup!

@@ -1,11 +1,11 @@
 	<?php   
-		require './backends/home-b.php';
+		require './backends/index-b.php';
 		$request = $_SERVER['REQUEST_URI'];
 		$request = substr($request, strrpos($request,'/'));
 		if ($request === '/') {
-
 			require 'user-menu.php'; user_menu('home','Home');
-        	require __DIR__.'/views/first-login.php';
+			if (!$progress) require __DIR__."/views/first-login.php";
+			if (!empty($progress)) require __DIR__."/views/home.php";
 		}
 		else if ($request === '/hospital-setup') {
 
@@ -26,7 +26,7 @@
 		}
 		else if ($request === '/getting-started') {
 			require 'user-menu.php'; user_menu('home','Getting Started');
-	        require __DIR__.'/views/first-overview.php';
+	        require __DIR__.'/views/getting-started.php';
 
 		}
 		else if ($request === '/logout') {

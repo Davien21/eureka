@@ -19,6 +19,14 @@ CREATE TABLE `eureka`.`user_settings` (
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `eureka`.`user_progress` (
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+	user_id VARCHAR(255),
+	view VARCHAR(255),
+	extra_details VARCHAR(255) DEFAULT NULL,
+	date_added timestamp DEFAULT current_timestamp(),
+	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 CREATE TABLE `eureka`.`hospitals` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	name VARCHAR(255),

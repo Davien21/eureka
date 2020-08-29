@@ -313,7 +313,10 @@ aside#side-nav {
 }
 
 /*  */
-
+.square-list {
+    list-style: square;
+    list-style-position: inside;
+}
 .checkbox-btn {
     color: #fff;
     padding: 1.5rem;
