@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS `eureka` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `eureka`;
 /*Change all lists to switch with plural endings*/
-CREATE TABLE `eureka`.`users` (
+CREATE TABLE `users` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	f_name VARCHAR(255),
 	l_name VARCHAR(255),
@@ -12,14 +12,14 @@ CREATE TABLE `eureka`.`users` (
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE `eureka`.`user_settings` (
+CREATE TABLE `user_settings` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	user_id VARCHAR(255),
 	login_type VARCHAR(255),
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE `eureka`.`user_progress` (
+CREATE TABLE `user_progress` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	user_id VARCHAR(255),
 	view VARCHAR(255),
@@ -27,17 +27,18 @@ CREATE TABLE `eureka`.`user_progress` (
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE `eureka`.`hospitals` (
+CREATE TABLE `hospitals` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	name VARCHAR(255),
 	address VARCHAR(255),
 	director_id INT(11),
 	invite_key VARCHAR(11),
+	setup_view VARCHAR(255),
 	status VARCHAR (20) DEFAULT 'enabled',
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE `eureka`.`hospital_settings` (
+CREATE TABLE `hospital_settings` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	hospital_id INT(255),
 	patient_ms VARCHAR(6),
@@ -46,7 +47,7 @@ CREATE TABLE `eureka`.`hospital_settings` (
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE `eureka`.`staff` (
+CREATE TABLE `staff` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	hospital_id VARCHAR(255),
 	f_name VARCHAR(255),
@@ -58,7 +59,7 @@ CREATE TABLE `eureka`.`staff` (
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE `eureka`.`directors` (
+CREATE TABLE `directors` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	hospital_id VARCHAR(255),
 	f_name VARCHAR(255),

@@ -5,17 +5,15 @@
 		if ($request === '/') {
 			require 'user-menu.php'; user_menu('home','Home');
 			if (!$progress) require __DIR__."/views/first-login.php";
-			if (!empty($progress)) require __DIR__."/views/home.php";
 		}
 		else if ($request === '/hospital-setup') {
-
 			require 'user-menu.php'; user_menu('home','Hospital Setup');
-	        require __DIR__.'/views/hospital-setup.php';
+	        require __DIR__.'/director/views/hospital-setup.php';
 		}
 		else if ($request === '/select-hospital-tools') {
 
 			require 'user-menu.php'; user_menu('home','Select Hospital Tools');
-	        require __DIR__.'/views/select-hospital-tools.php';
+	        require __DIR__.'/director/views/select-hospital-tools.php';
 			
 		}
 		else if ($request === '/join-hospital') {
