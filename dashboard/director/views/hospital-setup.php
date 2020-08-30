@@ -1,4 +1,4 @@
-<?php require './backends/hospital-setup-b.php'; ?>
+<?php require './director/controllers/hospital-setup-b.php'; ?>
 <section class="hospital-setup row ">
 	<form class="col-sm-9 col-md-9 col-lg-7 mx-a uto" action="" method="post">
 		<p class="">
@@ -17,16 +17,36 @@
 			<input class="form-control" type="text" name="address" value="<?=$address?>">
 			<small class="err"><?=$address_err?></small>
 		</div>
-		<div class="form-group">
-			<label class="d-flex">Hospital Email: <small class="ml-auto" >(use yours if you wish)</small> </label>
-			<input class="form-control" type="text" name="email" value="<?=$email?>">
-			<small class="err"><?=$email_err?></small>
-		</div>
-		<div class="form-group">
-			<label class="d-flex">Phone Number: <small class="ml-auto" >(use yours if you wish)</small> </label>
-			<input class="form-control" type="text" name="phone" value="<?=$phone?>">
-			<small class="err"><?=$phone_err?></small>
-		</div>
+		<section class="settings d-none">
+			<div class="form-group">
+				<div class="custom-control custom-switch ">
+					<input type="checkbox" class="custom-control-input" id="patient-ms" name="patient-ms">
+					
+					<label for="patient-ms" class="custom-control-label">
+						Turn <span>On</span> Patient Management System
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="custom-control custom-switch ">
+					<input type="checkbox" id="finance-ms" class="custom-control-input" name="finance-ms">
+					
+					<label for="finance-ms" class="custom-control-label">
+						Turn <span>On</span> Finance Management System
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="custom-control custom-switch ">
+					<input type="checkbox" id="activity-ms" class="custom-control-input" name="activity-ms">
+					
+					<label for="activity-ms" class="custom-control-label">
+						Turn <span>On</span> Activity Tracker
+					</label>
+				</div>
+			</div>
+		</section>
+		
 		<div class="mt-3">
 			<button class="btn btn-block green-btn " name="register">NEXT</button>
 		</div>

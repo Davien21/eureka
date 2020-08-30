@@ -1,5 +1,5 @@
 <?php
-	require 'classes/HospitalSetting.php';
+	require './director/controllers/classes/HospitalSetting.php';
 	$hospital = new HospitalSetting($id);
 	$hospital_ids = $hospital->get_all_hospital_ids($id);
 	$hospital_profiles = [];

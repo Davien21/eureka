@@ -1,4 +1,4 @@
-<?php require('./backends/home-b.php') ?>
+<?php require('./controllers/home-b.php') ?>
 <div class="my-2 container-fluid px-0">
 	<div class="d-flex my-2 justify-content-between">
 		<h5>Hospitals:</h5>

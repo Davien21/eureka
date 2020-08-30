@@ -1,1 +1,0 @@
-Hi Join Hospital Page!
