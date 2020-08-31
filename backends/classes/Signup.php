@@ -53,7 +53,7 @@
 		public function login ($input) {
 			session_start();
 			$_SESSION['user'] = $this->get_user_id($input);
-			header('Location:./dashboard/');
+			// header('Location:./dashboard/');
 		}
 		
 		
