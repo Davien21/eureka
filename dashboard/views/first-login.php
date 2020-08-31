@@ -1,12 +1,5 @@
-<?php //if(!empty($progress)) { ?>
-<!-- Welcome back <?=$f_name?> -->
-<!-- <a href="<?=$last_view?>" class="mt-3" >Click here to continue from where you left off.</a> -->
-<?php //} ?> 
 <div class="mt-3">
-	<?php //if(!$progress) { ?>
 	<p class=" ">Hello <?=$f_name?>!</p>
-	<?php //} ?>
-
 	<p>What would you like to do?</p>
 	<div class="row" >
 		<div class="col-sm-6 mb-4 mb col-md-4 ">

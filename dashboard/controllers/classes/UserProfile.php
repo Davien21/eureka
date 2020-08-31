@@ -21,6 +21,17 @@
 			// echo print_r($check_query->errorInfo());
 			return $record = $check_query->fetch(PDO::FETCH_ASSOC);
 		}
+		public function partial_update($field,$value) {
+			$sql = "UPDATE users
+					SET	{$field} = :input
+					WHERE id = :id";
+			$insert_query = PDO::prepare($sql);
+			$insert_query->execute(['input'=>$value,'id'=>$this->user_id]);
+			if ($insert_query ->errorCode() == 0) return;
+			$error = $insert_query->errorInfo();
+			print_r(['data'=>'','status'=>false, 'message'=>"There was an error - " . $error[2] ]);
+			return ['data'=>'','status'=>false, 'message'=>"There was an error - " . $error[2] ];
+		}
 		 
 		
 	}

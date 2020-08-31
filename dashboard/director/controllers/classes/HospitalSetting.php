@@ -13,7 +13,7 @@
 			return "Name: ".__CLASS__.
 				"<br>This Object allows you to perform CRUD operations on a hospital's settings";
 		}
-		public function get_all_hospital_ids($user_id)	{
+		public function get_ids_for_hospitals_directed($user_id)	{
 			$sql = "SELECT id
 					FROM hospitals
 					WHERE director_id = :user_id";
@@ -22,12 +22,12 @@
 			// echo print_r($check_query->errorInfo());
 			return $record = $check_query->fetchAll(PDO::FETCH_ASSOC);
 		}
-		public function get_hospital_profile($id)	{
+		public function get_hospital_profile($hospital_id)	{
 			$sql = "SELECT * 
 					FROM hospitals
 					WHERE id = :id";
 			$check_query = PDO::prepare($sql);
-			$check_query->execute(["id"=>$this->user_id]);
+			$check_query->execute(["id"=>$hospital_id]);
 			// echo print_r($check_query->errorInfo());
 			return $record = $check_query->fetch(PDO::FETCH_ASSOC);
 		}

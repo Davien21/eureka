@@ -13,7 +13,7 @@
 			return $conn = ['dsn'=>$dsn,'user'=>$user,'pass'=>$pass];
 		}
 		private function remote_db_conn () {
-			$host = "remotemysql.com";
+			$host = getenv('remote_db_host');
 			$db = getenv('remote_db');
 			$user = getenv('remote_db');
 			$pass = getenv('remote_db_pass');

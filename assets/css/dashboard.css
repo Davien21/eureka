@@ -8,6 +8,9 @@ body {
 a, a:hover {
     color: #059B55;
 }
+a.link-box, a.link-box:hover {
+    color: initial;
+}
 .err {
     color: red;
     font-size: 0.9em;
