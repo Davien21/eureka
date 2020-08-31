@@ -13,7 +13,6 @@
 			require 'menu.php'; user_menu('home','Hospital Setup');
 	        return require __DIR__.'/director/views/hospital-setup.php';
 			
-
 		}
 
 		else if (preg_match('/^(\/hospital)\?[\w=&]+/', $request)) {
