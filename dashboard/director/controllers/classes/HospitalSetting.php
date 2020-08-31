@@ -13,7 +13,7 @@
 			return "Name: ".__CLASS__.
 				"<br>This Object allows you to perform CRUD operations on a hospital's settings";
 		}
-		public function get_all_hospital_ids($user_id)	{
+		public function get_ids_for_hospitals_directed($user_id)	{
 			$sql = "SELECT id
 					FROM hospitals
 					WHERE director_id = :user_id";

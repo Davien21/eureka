@@ -5,7 +5,7 @@
 	</div>
 	<div class="row">
 	<?php foreach ($hospital_profiles as $value) { ?>
-		<a href="" class="link-box col-12 col-sm-9 col-md-6 col-xl-4  " title="Click to Open">
+		<a href="<?=$value['route']?>" class="link-box col-12 col-sm-9 col-md-6 col-xl-4  " title="Click to Open">
 			<div class="zoom bg-white depth-hover rounded">
 				<div class="d-flex ">
 					<div class="col-6 px-0 d-flex ">

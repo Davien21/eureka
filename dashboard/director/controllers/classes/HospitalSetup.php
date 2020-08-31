@@ -59,6 +59,20 @@
 			// print_r(['data'=>'','status'=>false, 'message'=>"There was an error - " . $error[2] ]);
 			return ['data'=>'','status'=>false, 'message'=>"There was an error - " . $error[2] ];
 		}
+		public function add_director($user_id,$name,$address,$invite_key) {
+			$sql = "INSERT INTO hospitals(director_id,name,address,invite_key)
+					VALUES(:director_id,:name,:address,:invite_key)";
+			$insert_query = PDO::prepare($sql);
+			$insert_query -> 
+				execute([
+					'director_id'=>$director_id,'name'=>$name,'address'=>$address,
+					'invite_key'=>$invite_key
+				]);
+			if ($insert_query ->errorCode() == 0) return;
+			$error = $insert_query->errorInfo();
+			// print_r(['data'=>'','status'=>false, 'message'=>"There was an error - " . $error[2] ]);
+			return ['data'=>'','status'=>false, 'message'=>"There was an error - " . $error[2] ];
+		}
 		public function partial_update($field,$value) {
 			$sql = "UPDATE hospitals
 					SET	{$field} = :input

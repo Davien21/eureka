@@ -20,7 +20,7 @@ $l6 = "class='active'";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> Eureka - Create online Classes With Unlimited Student </title>
+<title> Eureka - Set up a Hospital Management System and invite your staff. </title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
