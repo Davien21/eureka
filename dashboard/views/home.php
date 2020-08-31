@@ -1,5 +1,10 @@
 <?php require('./controllers/home-b.php') ?>
-<div class="my-2 container-fluid px-0">
+<div class="my-2">
+	<span>Welcome back</span> 
+	<span class="emphasis"><?=$f_name?></span>!
+</div>
+
+<div class="container-fluid px-0">
 	<div class="d-flex my-2 justify-content-between">
 		<h5>Hospitals:</h5>
 	</div>
