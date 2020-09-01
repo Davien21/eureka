@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS `eureka` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `eureka`;
 /*Change all lists to switch with plural endings*/
-CREATE TABLE `eureka`.`users` (
+CREATE TABLE `users` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	f_name VARCHAR(255),
 	l_name VARCHAR(255),
@@ -13,14 +13,14 @@ CREATE TABLE `eureka`.`users` (
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE `eureka`.`user_settings` (
+CREATE TABLE `user_settings` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	user_id VARCHAR(255),
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE `eureka`.`hospitals` (
+CREATE TABLE `hospitals` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	name VARCHAR(255),
 	address VARCHAR(255),
@@ -30,13 +30,13 @@ CREATE TABLE `eureka`.`hospitals` (
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE `eureka`.`hospital_settings` (
+CREATE TABLE `hospital_settings` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	hospital_id INT(255),
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE `eureka`.`staff` (
+CREATE TABLE `staff` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	hospital_id VARCHAR(255),
 	f_name VARCHAR(255),
@@ -49,7 +49,7 @@ CREATE TABLE `eureka`.`staff` (
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE `eureka`.`directors` (
+CREATE TABLE `directors` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
 	hospital_id VARCHAR(255),
 	f_name VARCHAR(255),
