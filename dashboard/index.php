@@ -5,45 +5,39 @@
 		$request = str_replace('/dashboard', '',$request);
 		if ($request === '/') {
 			require 'menu.php'; user_menu('home','Home');
-			if(!$user['hospital_no']) require __DIR__."/views/first-login.php";
-			require __DIR__."/views/home.php";
-			return;
+			if(!$user['hospital_no']) return require __DIR__."/views/first-login.php";
+			return require __DIR__."/views/home.php";
+			
 		}
 		else if ($request === '/hospital-setup') {
 			require 'menu.php'; user_menu('home','Hospital Setup');
-	        require __DIR__.'/director/views/hospital-setup.php';
-			return;
-
+	        return require __DIR__.'/director/views/hospital-setup.php';
+			
 		}
 
 		else if (preg_match('/^(\/hospital)\?[\w=&]+/', $request)) {
 			$query = explode('?', $request);
 			$params = explode('&', $query[1]);
-			print_r($params);
-			require 'menu.php'; user_menu('home',"Hospital Admin");
-	        require __DIR__.'/director/views/home.php';
-			return;
-
+			$hospital_user = explode('=',$params[1])[1];
+			if ($hospital_user === 'director') return require __DIR__."/director-router.php"; 
+			if ($hospital_user === 'staff') return require __DIR__."/staff-router.php"; 
 			
 		}
 		else if ($request === '/join-hospital') {
 
 			require 'menu.php'; user_menu('home','Join Hospital');
-	        require __DIR__.'/views/join-hospital.php';
-			return;
-
+	        return require __DIR__.'/views/join-hospital.php';
 			
 		}
 		else if ($request === '/getting-started') {
 			require 'menu.php'; user_menu('home','Getting Started');
-	        require __DIR__.'/views/getting-started.php';
-			return;
+	        return require __DIR__.'/views/getting-started.php';
+			
 
 
 		}
 		else if ($request === '/logout') {
-	        header('Location:../backends/logout.php');
-			return;
+	        return header('Location:../backends/logout.php');
 
 		}
 		else {

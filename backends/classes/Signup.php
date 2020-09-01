@@ -37,7 +37,7 @@
 				]);
 			if ($insert_query ->errorCode() == 0) return;
 			$error = $insert_query->errorInfo();
-			// print_r(['data'=>'','status'=>false, 'message'=>"There was an error - " . $error[2] ]);
+			print_r(['data'=>'','status'=>false, 'message'=>"There was an error - " . $error[2] ]);
 			return ['data'=>'','status'=>false, 'message'=>"There was an error - " . $error[2] ];
 		}
 		public function get_user_id($input)	{
@@ -53,7 +53,7 @@
 		public function login ($input) {
 			session_start();
 			$_SESSION['user'] = $this->get_user_id($input);
-			header('Location:./dashboard');
+			header('Location:./dashboard/');
 		}
 		
 		
