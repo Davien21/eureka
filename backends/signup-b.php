@@ -3,8 +3,8 @@
 	require 'backends/classes/DbConnect.php';
 	require 'backends/classes/FormValidator.php';
 	require 'backends/classes/Signup.php';
-			$signup = new Signup('users');
-			$is_successful = $signup->add_user($f_name,$l_name,$email,$phone,$pass);
+	$signup = new Signup('users');
+	$is_successful = $signup->add_user('cc','$l_name','$email','$phone','$pass');
 	if (isset($_POST['signup'])) {
 		$form = new FormValidator();
 		//Declaration of details 
