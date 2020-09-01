@@ -325,4 +325,7 @@ aside#side-nav {
     padding: 1.5rem;
 }
 
- 
+.link-box .card-img {
+    max-height: 140px !important;
+    /*width: 150px;*/
+} 

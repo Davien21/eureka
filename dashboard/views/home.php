@@ -11,10 +11,10 @@
 	<div class="row">
 	<?php foreach ($hospital_profiles as $value) { ?>
 		<a href="<?=$value['route']?>" class="link-box col-12 col-sm-9 col-md-6 col-xl-4  " title="Click to Open">
-			<div class="zoom bg-white depth-hover rounded">
+			<div class="card zoom bg-white depth-hover rounded">
 				<div class="d-flex ">
 					<div class="col-6 px-0 d-flex ">
-						<img src="../assets/imgs/staff.jpg" alt="Hospital Logo" class=" mx-auto align-self-center ">
+						<img src="../assets/imgs/staff.jpg" alt="Hospital Logo" class="card-img mx-auto align-self-center ">
 					</div>
 					<div class="col-6 mt-3">
 						<div class="d-flex">
