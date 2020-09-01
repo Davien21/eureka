@@ -3,6 +3,8 @@
 	require 'backends/classes/DbConnect.php';
 	require 'backends/classes/FormValidator.php';
 	require 'backends/classes/Signup.php';
+			$signup = new Signup('users');
+			$is_successful = $signup->add_user($f_name,$l_name,$email,$phone,$pass);
 	if (isset($_POST['signup'])) {
 		$form = new FormValidator();
 		//Declaration of details 
@@ -23,11 +25,9 @@
 		$all_errors = [$f_name_err,$l_name_err,$email_err,$phone_err,$pass_err];
 		//Db actions
 		if (!$form->check_all_errors($all_errors)) {
-			$signup = new Signup('users');
 			$email_err = $signup->check_if_in_db ($email,'email');
 			$phone_err = $signup->check_if_in_db ($phone,'phone');
 			if (empty($email_err) && empty($phone_err)) {
-				$is_successful = $signup->add_user($f_name,$l_name,$email,$phone,$pass);
 				if (empty($is_successful)) $signup->login($email);
 			}
 
