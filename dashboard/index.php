@@ -19,7 +19,7 @@
 			$query = explode('?', $request);
 			$params = explode('&', $query[1]);
 			$hospital_user = explode('=',$params[1])[1];
-			if ($hospital_user === 'director') require __DIR__."/director-router.php"; 
+			if ($hospital_user === 'director') require __DIR__."/director/router.php"; 
 			if ($hospital_user === 'staff') require __DIR__."/staff-router.php"; 
 			
 		}
