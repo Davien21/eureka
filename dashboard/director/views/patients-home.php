@@ -4,8 +4,12 @@
       <input placeholder="Search for a patient" class="form-control">
     </div>
     <div class="col d-flex justify-content-between">
-      <button class="btn btn-primary ml-auto">New</button>
-      <button class="btn btn-info ml-auto">View All</button>
+      <a class="btn btn-primary ml-auto" href="<?=$dir['patients-new']?>">
+        New
+      </a>
+      <a class="btn btn-info ml-auto" href="<?=$dir['patients-all']?>">
+        View All
+      </a>
     </div>
   </form>
 </section>

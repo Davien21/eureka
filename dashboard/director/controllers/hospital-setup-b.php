@@ -32,6 +32,5 @@
 
 		$name_err  = '';
 		$address_err  = '';
-		$pass_err  = '';
 	}
 ?>

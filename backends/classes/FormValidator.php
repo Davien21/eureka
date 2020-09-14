@@ -134,9 +134,8 @@
 			else {
 				 $pattern = '/^(\+234|0)[7-9]{1}(0|1)\d{8}$/';
 				 $error_status = true;
-			    if(!( preg_match($pattern,$variable))) {
-			        return ['status'=>$error_status,'error'=>"Please Input a Valid ".$label]['error']; 
-				}
+					if(!( preg_match($pattern,$variable)))
+						return "Please Input a Valid Phone number";
 			}
 		}
 		 
@@ -147,7 +146,7 @@
 			}
 		}
 		public function check_all_errors ($array_of_errors) {
-			$any_errors;
+			$any_errors = '';
 			foreach ($array_of_errors as $key => $value) {
 				if (!empty($value)) {
 					$any_errors = true;
@@ -163,16 +162,7 @@
 				return ['status'=>false,'error'=>$label." is not a valid number"]['error'];
 			}
 		}
-		public function check_number($variable,$label) {
-			if(check_if_empty($variable,$label)['status']) {
-				return check_if_empty($variable,$label)['error'];
-			}else {
-				if(!is_numeric($variable)) {
-					return ['status'=>false,'error'=>$label." is not a valid number"]['error'];
-				}
-			}
-		}
-		 
+				 
 		public function check_password ($pass,$label) {
 			if(empty($pass)) {
 				$result = ['status'=>true, 'error'=>("{$label} is required")];

@@ -13,9 +13,22 @@ CREATE TABLE `users` (
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `patients` (
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+	hospital_id INT(11), 
+	fname VARCHAR(255),
+	lname VARCHAR(255),
+	address VARCHAR(250),
+	phone VARCHAR(14),
+	kin_name VARCHAR(255),
+	kin_num VARCHAR(14),
+	status VARCHAR (20) DEFAULT 'Active',
+	date_added timestamp DEFAULT current_timestamp(),
+	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 CREATE TABLE `user_settings` (
 	id INT AUTO_INCREMENT PRIMARY KEY, 
-	user_id VARCHAR(255),
+	user_id INT(11),
 	date_added timestamp DEFAULT current_timestamp(),
 	last_edited timestamp DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
