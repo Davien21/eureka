@@ -1,6 +1,6 @@
 <section class="container-fluid px-0 my-5">
 	<div class="row">
-		<a href="#" class="link-box col-6 col-md-4 col-xl-3 text-center mb-2" title="Manage Patients">
+		<a href="<?=$dir['patients']?>" class="link-box col-6 col-md-4 col-xl-3 text-center mb-2" title="Manage Patients">
 			<div class="zoom bg-white paper-box-shadow depth-hover rounded  ">
 				<div class="row py-3">
 					<div class="col mt-3">
