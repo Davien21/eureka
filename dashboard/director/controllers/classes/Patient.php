@@ -15,7 +15,7 @@
 			return "Name: ".__CLASS__.
 				"<br>This Object allows you to perform CRUD operations on a patients";
 		}
-		public function isExisting($arr)	{
+		public function isExisting(array $arr)	{
 			$sql = "SELECT 1 FROM patients
 					WHERE fname = :fname
 					AND lname = :lname
@@ -29,7 +29,7 @@
 			]);
 			return $is_existing = $check_query->fetchColumn();
 		}
-    public function addPatient($arr) {
+    public function addPatient(array $arr) {
 			if( $this->isExisting($arr) ) 
 				return ['message'=> "This patient has already been registered.
 				<a class='my-2 d-block' href='#'>Click to See details</a>"];
@@ -43,14 +43,16 @@
 				':phone'=>$arr['phone'],':kin_name'=>$arr['kin_name'],
 				':kin_num'=>$arr['kin_num'],
 			]);
-			if ($insert_query ->errorCode() == 0) return;
+			if ($insert_query ->errorCode() == 0) return false;
 			$error = $insert_query->errorInfo();
 			return [ 'data'=>'','status'=>false, 
 				'message'=>"There was an error - " . $error[2] .
 				"<br>Contact support and send a screenshot of this error" 
 			];
     }
-		
+		public function getPatients() {
+			# code...
+		}
 		 
 		
   }

@@ -1,5 +1,9 @@
 <?php
-
+	$alert_info = [];
+	$alert_info['text-1'] = 'Back to home';
+	$alert_info['text-2'] = 'Add New patient';
+	$alert_info['link-1'] = $dir['patients'];
+	$alert_info['link-2'] = $dir['new-patient'];
 	if (isset($_POST['register'])) {
     $form = new FormValidator();
 		//Declaration of patient's details 
@@ -33,8 +37,9 @@
       require 'classes/Patient.php';
       $patient_cl = new Patient($user_id);
 			$err = $patient_cl->addPatient($patient);
-			if(!empty($err)) return $alert_info['success'] = $err['message'];
-			$alert_info['success'] = 'You have successfully registered this patient';
+			if(!empty($err)) {$alert_info['error'] = $err['message'];}
+			if(!$err) {	$alert_info['success'] = 'You have successfully registered this patient';}
+		
 		}
 	}else {
     $fname  = '';
@@ -51,5 +56,5 @@
 		$kin_name_err  = '';
 		$kin_num_err  = '';
 	}
-	$alert_info = [];
+	
 ?>

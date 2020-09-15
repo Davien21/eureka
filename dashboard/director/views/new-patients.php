@@ -1,8 +1,8 @@
 <?php require './director/controllers/new-patient-b.php'; ?>
 <?php require './form-alerts.php'; ?>
-<? alert($alert_info) ?>
+<?php formAlert($alert_info) ?>
 <section class="hospital-setup row ">
-	<form class="col-sm-9 col-md-9 col-lg-7" action="" method="post">
+	<form class="col col-lg-8 col-xl-7" action="" method="post">
 		<header class="my-3">
 			<h4>Fill in this Form:</h4>
 		</header>
