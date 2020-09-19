@@ -6,7 +6,7 @@
 	foreach ($hospital_ids as $value) {
 		$hospital_id = $value['id'];
 		$hospital_profile = $hospital->get_hospital_profile($hospital_id);
-		$hospital_profile['route'] = "./hospital?id={$hospital_id}&user=director&view=home";
+		$hospital_profile['route'] = "./hospital?id={$hospital_id}&u=dir&v=home";
 		array_push($hospital_profiles, $hospital_profile);
 	}
 

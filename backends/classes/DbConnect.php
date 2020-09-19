@@ -1,5 +1,4 @@
 <?php
-	// echo "Db connect linked!";
 /*
 *This class connects to a remote mysql database on remotemysql.com
 *change the details if you wish to change to localhost
