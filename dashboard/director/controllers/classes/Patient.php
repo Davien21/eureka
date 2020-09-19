@@ -51,7 +51,7 @@
 			];
     }
 		public function getPatients() {
-			# code...
+			
 		}
 		 
 		
